@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm_tb'
+ERROR: [VRFC 10-724] found '0' definitions of operator "=", cannot determine exact overloaded matching definition for "=" [C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd:111]
+ERROR: [VRFC 10-2989] 'w_stoplight' is not declared [C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd:116]
+ERROR: [VRFC 10-2989] 'w_stoplight' is not declared [C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd:118]
+ERROR: [VRFC 10-2989] 'w_stoplight' is not declared [C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd:120]
+ERROR: [VRFC 10-9458] unit 'test_bench' is ignored due to previous errors [C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd:57]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/C28Sanskruti.Sangalg/Downloads/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd' is ignored due to errors
