@@ -113,11 +113,11 @@ begin
 
         -- go to yellow
         w_left <= '1'; wait for k_clk_period;
-            assert w_stoplight = "001" report "right most left blinker should be on" severity failure;
+            assert w_L = "001" report "right most left blinker should be on" severity failure;
         wait for k_clk_period; -- time to go to red
-            assert w_stoplight = "011" report "middle left blinker should be on" severity failure;
+            assert w_L = "011" report "middle left blinker should be on" severity failure;
         wait for k_clk_period; -- time to go to red
-            assert w_stoplight = "111" report "left most left blinker should be on" severity failure;
+            assert w_L = "111" report "left most left blinker should be on" severity failure;
         
 wait;
 	end process;
