@@ -114,7 +114,7 @@ begin
 	-- Output logic
 	o_lights_L(0) <= state(6) or state(2) or state(1) or state(0);
 	o_lights_L(1) <= state(6) or state(1) or state(0);
-	o_lights_L(3) <= state(6) or  state(0);
+	o_lights_L(2) <= state(6) or  state(0);
 	o_lights_R(0) <= state(6) or state(5) or state(4) or state(3);
 	o_lights_R(1) <= state(6) or state(4) or state(3);
 	o_lights_R(2) <= state(6) or state(3);
@@ -124,7 +124,7 @@ begin
   register_proc : process (i_clk, i_reset)
 begin
     if i_reset = '1' then
-        state <= "10";        -- reset state is yellow
+        state <= "10000000";        
     elsif (rising_edge(i_clk)) then
         state <= next_state;    -- next state becomes current state
     end if;

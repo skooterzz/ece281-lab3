@@ -69,7 +69,7 @@ architecture test_bench of thunderbird_fsm_tb is
 		signal w_clk : std_logic := '0';
 		signal w_reset : std_logic := '0';
 		signal w_left: std_logic := '0';
-		signal w_right : std_logic := '0';
+		signal w_right : std_logic:= '0';
 
 	signal w_L : std_logic_vector(2 downto 0) := "000"; -- RYG one-hot
 	signal w_R : std_logic_vector(2 downto 0) := "000"; -- RYG one-hot
@@ -108,15 +108,17 @@ begin
 		-- reset		
 		w_reset <= '1';
 		wait for k_clk_period*1;
-		  assert w_left = "000" report "bad reset" severity failure;
+		  assert w_L = "000" report "bad left reset" severity failure;
+		  assert w_R = "000" report "bad right reset" severity failure;
 		
 
-        -- go to yellow
+        -- go to left 
+        w_reset <= '0';
         w_left <= '1'; wait for k_clk_period;
             assert w_L = "001" report "right most left blinker should be on" severity failure;
-        wait for k_clk_period; -- time to go to red
+        wait for k_clk_period; 
             assert w_L = "011" report "middle left blinker should be on" severity failure;
-        wait for k_clk_period; -- time to go to red
+        wait for k_clk_period; 
             assert w_L = "111" report "left most left blinker should be on" severity failure;
         
 wait;
